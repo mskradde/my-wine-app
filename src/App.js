@@ -17,8 +17,11 @@ function App() {
   }, []);
   return (
     <div className="App">
-      <header>My Wine App</header>
-      <main>
+      <header className="header">
+        Choose your favourite Wine{" "}
+        <input className="header__input" placeholder="Discover Wine" />
+      </header>
+      <main className="wineList">
         <List>
           {allWines?.map((wine) => {
             return (
@@ -30,7 +33,7 @@ function App() {
         </List>
       </main>
 
-      <footer>Footer</footer>
+      <footer className="footer">Footer</footer>
     </div>
   );
 }
