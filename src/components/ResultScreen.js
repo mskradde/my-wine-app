@@ -14,7 +14,7 @@ export default function ResultScreen({ allWines }) {
     <div className="app">
       <header>
         <small>Hello,</small>
-        <h2>What wine today?</h2>
+        <h2>Choose a wine you love</h2>
 
         <input
           value={query}

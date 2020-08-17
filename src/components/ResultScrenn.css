@@ -1,39 +1,8 @@
-.app {
+body {
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
   height: 100vh;
-  display: grid;
-  grid-template-rows: auto 1fr auto;
-}
-.app > * {
-  flex-basis: 100%;
-}
-.header {
-  padding: 20px 20px;
-  background-image: var(--bg-gradient-light);
-}
-
-header > .header__input {
-  font-size: 0.9em;
-  padding: 10px 15px;
-  margin-bottom: 10px;
-  border: none;
-  border-radius: 50px;
-  background-color: rgba(255, 255, 255, 0.4);
-  color: #888888;
-}
-
-.header__input {
-  border: none;
-  border-radius: 50px;
-}
-.wineList {
-  margin-block: 10px;
-  display: flex;
-  flex-flow: row wrap;
-}
-
-footer {
-  display: flex;
-  flex-direction: column;
-  padding: 10px;
-  background-image: var(--bg-gradient-light);
 }
