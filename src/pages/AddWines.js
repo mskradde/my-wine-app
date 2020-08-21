@@ -9,7 +9,7 @@ function AddWines(props) {
 
       <form>
         <input placeholder="Wine" />
-        <input placeholder="Region" />
+        <input placeholder="Regions" />
         <input type="submit" value="add Wine" />
       </form>
     </>
