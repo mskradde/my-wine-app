@@ -1,0 +1,8 @@
+{
+  "wines": [
+    { "id": 1, "wine": "Petrus", "region": "Pomerol" },
+    { "id": 1, "wine": "Chateau Lafleur", "region": "Pomerol" },
+    { "id": 1, "wine": "Chateau Pavie", "region": "Saint Emilion Grand Cru" },
+    { "id": 1, "wine": "Chateau Hosanna", "region": "Pomerol" }
+  ]
+}
