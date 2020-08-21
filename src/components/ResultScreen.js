@@ -1,14 +1,23 @@
-import React from "react";
+import React, { useEffect } from "react";
 import List from "./List";
 import ListItem from "./ListItem";
+import getWines from "../api/WineAPI";
 
 export default function ResultScreen({ allWines }) {
   const [query, setQuery] = React.useState("");
+  const [wines, setWines] = React.useState(null);
+  useEffect(() => {
+    async function fetchWines() {
+      const wines = await getWines();
+      setWines(wines);
+    }
+    fetchWines();
+  }, []);
 
-  const filteredWines = allWines.filter((wine) => {
-    const thisWine = wine.wine.toLowerCase().match(query.toLowerCase());
-    return thisWine;
-  });
+  // const filteredWines = allWines.filter((wine) => {
+  //   const thisWine = wine.wine.toLowerCase().match(query.toLowerCase());
+  //   return thisWine;
+  // });
 
   return (
     <div className="app">
@@ -26,10 +35,11 @@ export default function ResultScreen({ allWines }) {
 
       <main>
         <List>
-          {filteredWines.map((wine) => {
+          {wines?.map((wine) => {
             return (
-              <ListItem key={wine.lwin} href={wine.href} className="wineList">
+              <ListItem key={wine.wine} className="wineList">
                 {wine.wine}
+                {wine.region}
               </ListItem>
             );
           })}
