@@ -4,6 +4,7 @@ import fetchWine from "./api/WineAPI";
 import LoadingScreen from "./components/LoadingScreen";
 import ResultScreen from "./pages/ResultScreen";
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
+import AddWines from "./pages/AddWines";
 
 function App() {
   const [allWines, setAllWines] = React.useState([]);
@@ -28,7 +29,9 @@ function App() {
         <Route exact path="/">
           <ResultScreen allWines={allWines} />
         </Route>
-        <Route path="/add">Add Wines</Route>
+        <Route path="/add">
+          <AddWines />
+        </Route>
       </Switch>
       <footer>
         <Link to="/">Home</Link>
