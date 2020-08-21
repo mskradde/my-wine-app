@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
-import List from "./List";
-import ListItem from "./ListItem";
+import List from "../components/List";
+import ListItem from "../components/ListItem";
 import getWines from "../api/WineAPI";
 
 export default function ResultScreen({ allWines }) {
@@ -45,7 +45,6 @@ export default function ResultScreen({ allWines }) {
           })}
         </List>
       </main>
-      <footer>Footer</footer>
     </div>
   );
 }
