@@ -13,6 +13,10 @@ app.get("/", (request, response) => {
   response.send("Request sleep");
 });
 
+app.post("/add", (request, response) => {
+  response.send("hello world");
+});
+
 app.listen(port, () => {
   console.log(`dubidu I´m listen to you on http://localhost:${port}`);
 });
